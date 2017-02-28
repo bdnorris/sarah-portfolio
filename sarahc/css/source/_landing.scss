@@ -1,0 +1,77 @@
+/* ------------------
+LANDING PAGE
+-------------------*/
+
+/*body {background:#ffffff url("../img/old_map/old_map.png") repeat top left;}*/
+
+#landingWrapper {text-align:center;margin-top:10%;}
+#landingWrapper h1 {}
+#landingWrapper h3 {font-family:"Alegreya Sans";font-weight:300;font-size:1.5rem;margin:0.333em 0 0.4em 0;line-height:1em;}
+#landingWrapper p {font-weight:300;margin:0.1em 0 0.333em 0;font-size:1.1rem;line-height:1em;}
+#landingWrapper ul li {padding-bottom:1em;}
+#landingWrapper ul li a {display:block;font-family:"entypo", sans-serif;font-size:3em;color:#a8dbd2;
+-webkit-transition: background 400ms ease;
+-moz-transition: background 400ms ease;
+-ms-transition: background 400ms ease;
+-o-transition: background 400ms ease;
+transition: background 400ms ease;}
+#landingWrapper ul li a:hover {color:#96c8bf;}
+#landingWrapper ul li a#pinterest {}
+#landingWrapper ul li a#linkedin {}
+
+
+#contactForm div {text-align:center;}
+#contactForm div #cFormButton {
+	display:block;
+	background-color:#918e8d;
+	cursor:pointer;
+	padding:1em;
+	/*width:12em;
+	margin:0 auto;*/
+	color:#ffffff;
+	font-size:1rem;
+	font-weight:400;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	-webkit-transition: background 400ms ease;
+-moz-transition: background 400ms ease;
+-ms-transition: background 400ms ease;
+-o-transition: background 400ms ease;
+transition: background 400ms ease;
+}
+#contactForm div #cFormButton:hover {background-color:#878482;}
+#contactForm div #cFormButton:active {font-size:0.98rem;}
+#contactForm #formContainer {display:none;margin:1em 0 2em 0;text-align:left;}
+#contactForm  p {text-align:left;font-size:1em;}
+#contactForm  input[type="submit"], a.button {
+	box-shadow:none;
+	text-shadow:none;
+	border:none;
+	border-radius:0;
+	font-size:1em;
+	font-family:"Alegreya Sans";
+		text-transform:uppercase;
+	letter-spacing:1px;
+	background-color:#ebb5b2;
+	color:#ffffff;
+	padding:0.7em 1em;
+	-webkit-transition: background 400ms ease;
+-moz-transition: background 400ms ease;
+-ms-transition: background 400ms ease;
+-o-transition: background 400ms ease;
+transition: background 400ms ease;
+}
+#contactForm input[type="submit"]:hover, a.button:hover {background-color:#dfaaa7;}
+#contactForm input[type="submit"]:active, a.button:active {font-size:0.98rem;}
+
+div.wpcf7-response-output {font-size:0.9rem;margin:1em 0 1em 0;line-height:1.2em;text-align:left;}
+div.wpcf7-mail-sent-ok {border:none;background-color:#cee8d4;}
+div.wpcf7-validation-errors {border:none;background-color:#e3e495;}
+
+/* Desktop Landing Page Content */
+@media only screen and (min-width: 40.063em) {
+	#landingWrapper {margin-top:20%;}
+#landingWrapper h3 {font-size:2.1rem;}
+	#landingWrapper p {font-size:1.3rem;}
+
+}
