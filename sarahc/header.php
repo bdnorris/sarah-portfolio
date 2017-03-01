@@ -21,14 +21,14 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
-	
-	<?php 
+
+	<?php
 		if (is_page( 'landing-page' )) {
 		}
 		else {
 	?>
 	<!--<img src='<?php echo get_template_directory_uri(); ?>/img/ajax-loader.gif' id='ajax-loader'>-->
-    <div class="spinner" id="ajax-loader">
+  <div class="spinner" id="ajax-loader">
   <div class="bounce1"></div>
   <div class="bounce2"></div>
   <div class="bounce3"></div>
@@ -48,16 +48,16 @@
             	  </div>
 				</div>
 			  </div>
-            
+
             <nav id="site-navigation" class="main-navigation" role="navigation">
                 <h1 class="menu-toggle"><?php _e( 'Menu', 'sarahc' ); ?></h1>
                 <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'sarahc' ); ?></a>
-    
+
                 <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
             </nav><!-- #site-navigation -->
         </div>
         </div>
-		
+
 	</header><!-- #masthead -->
 
 	<?php

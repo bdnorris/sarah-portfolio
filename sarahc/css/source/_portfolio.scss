@@ -19,3 +19,14 @@ aside {text-align:left;}
 aside ul {list-style:none;margin:0;}
 
 span.cancel img {width:24px;height:24px;}
+
+div#port-container {
+  position: fixed;
+  width: 100vw;
+  height: 30vh;
+  background-color: white;
+  color: black;
+  bottom: 0;
+  left: 0;
+  overflow: scroll;
+}

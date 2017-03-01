@@ -9,7 +9,7 @@
 ?>
 
 	</div><!-- #content -->
-	<?php 
+	<?php
 		if (is_page( 'landing-page' )) {
 		}
 		else {
@@ -31,26 +31,26 @@
 
 <?php wp_footer(); ?>
     <script>
-      jQuery(document).foundation();
-		
+      //jQuery(document).foundation();
+/*
 	jQuery(document).ready(function(){
   		var defaults      = {
-  selector:             '[data-adaptive-background="1"]',
-  parent:               null,
-  normalizeTextColor:   false,
-  normalizedTextColors:  {
-    light:      "#fff",
-    dark:       "#000"
-  },
-  lumaClasses:  {
-    light:      "ab-light",
-    dark:       "ab-dark"
-  }
-};
+  		selector:             '[data-adaptive-background="1"]',
+			  parent:               null,
+			  normalizeTextColor:   false,
+			  normalizedTextColors:  {
+			    light:      "#fff",
+			    dark:       "#000"
+			  },
+			  lumaClasses:  {
+			    light:      "ab-light",
+			    dark:       "ab-dark"
+			  }
+			};
 jQuery.adaptiveBackground.run(defaults)
-		
-		
-	});
+
+
+	});*/
     </script>
 </body>
 </html>
