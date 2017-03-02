@@ -38,7 +38,7 @@ get_header(); ?>
 		$the_query = new WP_Query( $args );
 
 	?>
-
+<div id="app">
 			<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4" id="myGrid">
 				<?php
 				// The Loop
@@ -48,16 +48,17 @@ get_header(); ?>
 				<li>
 
 				<?php
-					if (has_post_thumbnail( $post->ID ) ):
-					$image = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'medium' );
+					if (has_post_thumbnail( $post->ID ) ) : $image = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'medium' );
 					//$thumb_id = get_post_thumbnail_id($post->id);
 					//$alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 					//echo $alt;
+					$id = $post->ID;
+					$url = base64_encode(get_permalink( $id ));
 				?>
-					<a href="<?php the_permalink(); ?>" class="pieceLink" data-reveal-id="myModal"><div class="overlay">
-						<img src="<?php echo $image[0]; ?>" width="<?php echo $image[1]; ?>" height="<?php echo $image[2]; ?>" alt="<?php //the_title(); ?>" data-adaptive-background='1' class="projectThumb">
+					<div class="pieceLink" v-on:click="loadPort('<?php echo $url ?>')">
+						<img src="<?php echo $image[0]; ?>" width="<?php echo $image[1]; ?>" height="<?php echo $image[2]; ?>" alt="<?php //the_title(); ?>" class="projectThumb">
 						<div class="overlay"><?php //the_title(); ?></div>
-					</a>
+					</div>
 				<?php
 					endif;
 				?>
@@ -70,8 +71,8 @@ get_header(); ?>
 			</ul>
 
 			<!--<div id="myModal" class="reveal-modal medium" data-reveal></div>-->
-			<div id="port-container">container</div>
-
+			<div id="port-container">{{ content }}</div>
+</div>
 
 </div></div>
 		</main><!-- #main -->
