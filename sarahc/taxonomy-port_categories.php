@@ -71,7 +71,9 @@ get_header(); ?>
 			</ul>
 
 			<!--<div id="myModal" class="reveal-modal medium" data-reveal></div>-->
-			<div id="port-container">{{ content }}</div>
+			<a v-on:click="hidePort" v-show="activated == true"><span class="cancel"><img src="<?php echo get_template_directory_uri(); ?>/img/x.png"></span></a>
+			<div id="port-container" v-html="content"></div>
+
 </div>
 
 </div></div>

@@ -17,8 +17,8 @@
 				'after'  => '</div>',
 			) );
 		?>
-		
-	<?php	
+
+	<?php
 		$thumb_ID = get_post_thumbnail_id( $post->ID );
 		$args = array(
 			'post_type' => 'attachment',
@@ -32,14 +32,14 @@
 		$images = get_posts($args);
 		//print_r ($images);
 	?>
-		
+
         <ul style="" class="portImages">
             <?php
         	foreach( $images as $image ) {
 				echo "<li>";
 				$aMeta = wp_get_attachment_image_src( $image->ID, 'full' );
 				echo "<img src='" . wp_get_attachment_url($image->ID) . "' height='" . $aMeta[2] . "' width='" . $aMeta[1] . "'>";
-				
+
 				echo "</li>";
             }
             ?>

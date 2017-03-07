@@ -47,10 +47,12 @@
 		new Vue({
 		 el: '#app',
 		 data: {
-		   content: ''
+		   content: '',
+			 activated: false
 		 },
 		 methods: {
 			 loadPort: function(myUrl) {
+				 $ajaxSpinner.fadeIn();
 				 //Vue.set(this.data.text = "goodbye world!");
 				 var myUrl = atob(myUrl);
 				 var self = this;
@@ -58,12 +60,26 @@
              url: myUrl,
              method: 'GET',
              success: function (data) {
-                 self.content = data;
+							$ajaxSpinner.fadeOut();
+							//data = jQuery(data).contents('.entry-content');
+							self.content = data;
+							self.showPort();
              },
              error: function (error) {
                  alert(JSON.stringify(error));
+								 $ajaxSpinner.fadeOut();
              }
          });
+			 },
+			 showPort: function() {
+				 this.activated = true;
+				 console.log('showport');
+				 jQuery('body').addClass('modal-open');
+			 },
+			 hidePort: function() {
+				 this.activated = false;
+				 console.log('hideport');
+				 jQuery('body').removeClass('modal-open');
 			 }
 			}
 		});

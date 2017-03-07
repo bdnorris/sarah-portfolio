@@ -23,7 +23,7 @@
 	<?php do_action( 'before' ); ?>
 
 	<?php
-		if (is_page( 'landing-page' )) {
+		if (is_page( 'landing-page' ) || is_singular( 'portfolio' )) {
 		}
 		else {
 	?>

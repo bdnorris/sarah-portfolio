@@ -9,7 +9,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<a class="close-reveal-modal"><span class="cancel"><img src="<?php echo get_template_directory_uri(); ?>/img/x.png"></span></a>
+			
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part( 'content', 'portfolio' ); ?>
