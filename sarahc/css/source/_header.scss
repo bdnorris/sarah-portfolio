@@ -2,18 +2,27 @@
 Header
 -------------------*/
 
-#page {position:relative;padding-bottom:2em;}
+#page {
+  //position:relative;
+  //padding-bottom:2em;
+}
 #ajax-loader {
     margin-left:-50px;
     height: 100px;
     left: 50%;
-    position: fixed;
+    position: absolute;
     top: 14em;
     width: 100px;
     z-index: 1000;
 }
 
-header {margin-top:1em;text-align:center;}
+header {
+  margin-top:1em;
+  text-align:center;
+  a {
+    display: block;
+  }
+}
 
 .spinner {
   margin: 100px auto 0;

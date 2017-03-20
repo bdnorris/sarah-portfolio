@@ -45,14 +45,14 @@
 		});*/
 
 		new Vue({
-		 el: '#app',
+		 el: '#primary',
 		 data: {
 		   content: '',
 			 activated: false
 		 },
 		 methods: {
 			 loadPort: function(myUrl) {
-				 $ajaxSpinner.fadeIn();
+				 /*$ajaxSpinner.fadeIn();
 				 //Vue.set(this.data.text = "goodbye world!");
 				 var myUrl = atob(myUrl);
 				 var self = this;
@@ -69,19 +69,27 @@
                  alert(JSON.stringify(error));
 								 $ajaxSpinner.fadeOut();
              }
-         });
+         });*/
+
+			 },
+			 loadPortAPI: function() {
+
 			 },
 			 showPort: function() {
 				 this.activated = true;
 				 console.log('showport');
-				 jQuery('body').addClass('modal-open');
+				 jQuery('#port-container').addClass('open');
 			 },
 			 hidePort: function() {
 				 this.activated = false;
 				 console.log('hideport');
-				 jQuery('body').removeClass('modal-open');
+				 jQuery('#port-container').removeClass('open');
 			 }
 			}
+		});
+
+		jQuery('.modaal-ajax').modaal({
+		    type: 'ajax'
 		});
 
 		jQuery('.noclick').click(function(){

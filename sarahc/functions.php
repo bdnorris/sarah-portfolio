@@ -97,6 +97,8 @@ function sarahc_scripts() {
 
 	wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/custom.js', array(), '5', true );
 
+	wp_enqueue_script( 'modaal', get_template_directory_uri() . '/js/modaal.min.js', array(), '0.3.1', true );
+
 	//wp_enqueue_script( 'adaptiveColor', get_template_directory_uri() . '/js/jquery.adaptive-backgrounds.min.js', array(), '1', true );
 
 	//wp_enqueue_script( 'sarahc-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
