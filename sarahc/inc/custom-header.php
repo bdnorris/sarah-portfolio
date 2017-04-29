@@ -27,7 +27,7 @@
 function sarahc_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'sarahc_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000000',
+		'default-text-color'     => '031e1e',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,

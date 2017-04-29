@@ -56,11 +56,16 @@ get_header(); ?>
 					$url = base64_encode(get_permalink( $id ));
 					$urlNE = get_permalink( $id );
 				?>
-					<div class="pieceLink" v-on:click="loadPort('<?php echo $url ?>')">
+					<!--<div class="pieceLink" v-on:click="loadPort('<?php echo $url ?>')">
 						<img src="<?php echo $image[0]; ?>" width="<?php echo $image[1]; ?>" height="<?php echo $image[2]; ?>" alt="<?php //the_title(); ?>" class="projectThumb">
 						<div class="overlay"><?php //the_title(); ?></div>
-					</div>
-					<a href="<?php echo $urlNE ?>" class="modaal-ajax">Show</a>
+					</div>-->
+					<a href="<?php echo $urlNE ?>" class="modaal-ajax pieceLink">
+						<img src="<?php echo $image[0]; ?>" width="<?php echo $image[1]; ?>" height="<?php echo $image[2]; ?>" alt="<?php //the_title(); ?>" class="projectThumb">
+						<div class="overlay">
+							<h4><?php the_title(); ?></h4>
+						</div>
+					</a>
 				<?php
 					endif;
 				?>
@@ -78,8 +83,8 @@ get_header(); ?>
 </div></div>
 		</main><!-- #main -->
 		<!--<div id="myModal" class="reveal-modal medium" data-reveal></div>-->
-		<a v-on:click="hidePort" v-show="activated == true" class="cancel"><span><img src="<?php echo get_template_directory_uri(); ?>/img/x.png"></span></a>
-		<div id="port-container" v-html="content"></div>
+		<!--<a v-on:click="hidePort" v-show="activated == true" class="cancel"><span><img src="<?php echo get_template_directory_uri(); ?>/img/x.png"></span></a>-->
+		<!--<div id="port-container" v-html="content"></div>-->
 	</section><!-- #primary -->
 
 

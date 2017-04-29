@@ -44,6 +44,8 @@
 
 		});*/
 
+
+/*
 		new Vue({
 		 el: '#primary',
 		 data: {
@@ -70,7 +72,7 @@
 								 $ajaxSpinner.fadeOut();
              }
          });*/
-
+/*
 			 },
 			 loadPortAPI: function() {
 
@@ -87,7 +89,7 @@
 			 }
 			}
 		});
-
+*/
 		jQuery('.modaal-ajax').modaal({
 		    type: 'ajax'
 		});

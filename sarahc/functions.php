@@ -93,7 +93,7 @@ function sarahc_scripts() {
 
 	//wp_enqueue_script( 'foundationjs', get_template_directory_uri() . '/js/foundation.min.js', array(), '5', true );
 
-	wp_enqueue_script( 'vue', get_template_directory_uri() . '/js/vendor/vue.js', array(), '2.2', true );
+	//wp_enqueue_script( 'vue', get_template_directory_uri() . '/js/vendor/vue.js', array(), '2.2', true );
 
 	wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/custom.js', array(), '5', true );
 

@@ -2,4 +2,14 @@
 Footer
 -------------------*/
 
-#colophon p {margin:0;font-size:0.8rem;text-align:center;padding:0;line-height:1rem;color:#231f20;}
+#colophon {
+  margin: 0 0 1em 0;
+  p {
+    margin: 0;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0;
+    line-height: 1rem;
+    color: $near-black;
+  }
+}

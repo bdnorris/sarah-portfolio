@@ -673,6 +673,9 @@ h3 {
     font-size: 1rem;
     letter-spacing: 1px; } }
 
+h3, h4 {
+  font-family: "Alegreya Sans", sans-serif; }
+
 h1.page-title {
   text-align: center;
   text-transform: uppercase;
@@ -825,27 +828,30 @@ ul#myGrid li a:hover img {
   opacity: 0.1;
   filter: alpha(opacity=10); }
 
-ul#myGrid li a div.overlay {
+ul#myGrid li a .overlay {
   display: none;
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  color: #ffffff;
+  color: #231f20;
   /*background-color:rgba(185,136,213,0.3);*/
   text-align: center;
-  padding-top: 40%;
-  padding-bottom: 40%;
+  padding-top: 50%;
   padding-left: 1em;
   padding-right: 1em;
+  transform: translateY(-1em);
   font-size: 1.6rem;
   letter-spacing: 1px;
   font-weight: 400;
   text-transform: uppercase; }
+  ul#myGrid li a .overlay > h4 {
+    line-height: 1em;
+    text-align: center; }
 
 ul#myGrid li a.ab-light div.overlay {
-  color: #000; }
+  color: #231f20; }
 
 ul#myGrid li a.ab-dark div.overlay {
   color: #fff; }
@@ -894,10 +900,10 @@ div#port-container {
   display: none;
   position: absolute;
   min-height: 10em;
-  width: 100vw;
+  width: 100%;
   height: auto;
   background-color: white;
-  color: black;
+  color: #231f20;
   bottom: 0;
   left: 0;
   top: 0;
@@ -929,13 +935,15 @@ a.cancel {
 /* ------------------
 Footer
 -------------------*/
-#colophon p {
-  margin: 0;
-  font-size: 0.8rem;
-  text-align: center;
-  padding: 0;
-  line-height: 1rem;
-  color: #231f20; }
+#colophon {
+  margin: 0 0 1em 0; }
+  #colophon p {
+    margin: 0;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0;
+    line-height: 1rem;
+    color: #231f20; }
 
 /* ------------------
 LANDING PAGE
