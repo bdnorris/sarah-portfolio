@@ -92,12 +92,13 @@ function sarahc_scripts() {
 	//wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr.js', array(), '2014', false );
 
 	//wp_enqueue_script( 'foundationjs', get_template_directory_uri() . '/js/foundation.min.js', array(), '5', true );
+	//wp_enqueue_script( 'foundationjs', get_template_directory_uri() . '/js/foundation.reveal.js', array(), '5', true );
 
 	//wp_enqueue_script( 'vue', get_template_directory_uri() . '/js/vendor/vue.js', array(), '2.2', true );
 
-	wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/custom.js', array(), '5', true );
+	wp_enqueue_script( 'modaal', get_template_directory_uri() . '/js/modaal.js', array('jquery'), '0.3.1', true );
 
-	wp_enqueue_script( 'modaal', get_template_directory_uri() . '/js/modaal.min.js', array(), '0.3.1', true );
+		wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/custom.js', array('jquery'), '5', true );
 
 	//wp_enqueue_script( 'adaptiveColor', get_template_directory_uri() . '/js/jquery.adaptive-backgrounds.min.js', array(), '1', true );
 
