@@ -28,11 +28,7 @@
 		else {
 	?>
 	<!--<img src='<?php echo get_template_directory_uri(); ?>/img/ajax-loader.gif' id='ajax-loader'>-->
-  <div class="spinner" id="ajax-loader">
-  <div class="bounce1"></div>
-  <div class="bounce2"></div>
-  <div class="bounce3"></div>
-</div>
+
 	<header id="masthead" class="site-header" role="banner">
 		<div class="row">
 		  <div class="small-12 small-centered columns">
