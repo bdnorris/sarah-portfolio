@@ -80,7 +80,8 @@
 */
 ( function( $ ) {
 
-	var modaal_loading_spinner = '<div class="modaal-loading-spinner"><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div>'
+	//var modaal_loading_spinner = '<div class="modaal-loading-spinner"><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div>';
+	var modaal_loading_spinner = '<div class="spinner" id="ajax-loader"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>';
 
 	var Modaal = {
 		init : function(options, elem) {
@@ -915,6 +916,7 @@
 					$('#' + self.scope.id + ' .modaal-content-container').contents().clone(true,true).appendTo( self.$elem.attr('href') )
 				}
 				// remove markup from dom
+				//console.log(modal_wrapper);
 				modal_wrapper.remove();
 				// CB: after_close
 				self.options.after_close.call(self);
@@ -966,7 +968,9 @@
 					opacity: 0
 				}, self.options.animation_speed, function(){
 					// remove overlay from dom
+					//console.log($(this));
 					$(this).remove();
+					//$('.modaal-overlay').remove();
 				});
 			}
 		}
