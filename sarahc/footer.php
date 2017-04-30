@@ -18,7 +18,7 @@
 		<div class="small-12 small-centered columns">
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="site-info">
-				<p>All works &copy; Sarah Carney <?php date("Y") ?>.</p>
+				<p>All works &copy; Sarah Carney <?php echo date("Y") ?>.</p>
 				<p>Please do not reproduce without the expressed written consent of Sarah Carney.</p>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
@@ -51,6 +51,9 @@ jQuery.adaptiveBackground.run(defaults)
 
 
 	});*/
+
+    //jQuery(document).foundation();
+
     </script>
 </body>
 </html>
