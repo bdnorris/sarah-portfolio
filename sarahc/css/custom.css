@@ -117,7 +117,7 @@
     outline: none;
     background: #fff; }
     .modaal-close:focus:before, .modaal-close:focus:after, .modaal-close:hover:before, .modaal-close:hover:after {
-      background: #b93d0c; }
+      background-color: #84d4e4; }
   .modaal-close span {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
@@ -689,15 +689,122 @@ a {
 a:visited {
   color: #a4c7ac; }
 
+.port-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: start;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row; }
+  .port-grid > li {
+    margin: 0 30px 60px 30px;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    box-flex: 0;
+    -webkit-flex: 0 0 calc(20% - 60px);
+    -moz-flex: 0 0 calc(20% - 60px);
+    -ms-flex: 0 0 calc(20% - 60px);
+    flex: 0 0 calc(20% - 60px);
+    border: 1px solid #bbc2d1; }
+
+ul#myGrid li a {
+  position: relative;
+  display: block; }
+
+ul#myGrid li a:hover img {
+  opacity: 0.1;
+  filter: alpha(opacity=10); }
+
+ul#myGrid li a .overlay {
+  display: none;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  color: #231f20;
+  /*background-color:rgba(185,136,213,0.3);*/
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em; }
+  ul#myGrid li a .overlay > h4 {
+    font-size: 16px;
+    line-height: 1em;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-transform: uppercase; }
+
+ul#myGrid li a.ab-light div.overlay {
+  color: #231f20; }
+
+ul#myGrid li a.ab-dark div.overlay {
+  color: #fff; }
+
+ul#myGrid li a:hover div.overlay {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
 /* ------------------
 Header
 -------------------*/
 #ajax-loader {
-  margin-left: -50px;
   height: 100px;
-  left: 50%;
-  position: absolute;
-  top: 14em;
+  position: relative;
+  top: 20vh;
   width: 100px;
   z-index: 1000; }
 
@@ -751,8 +858,8 @@ Navigation
 -------------------*/
 nav {
   text-align: center;
-  border-top: 1px solid #b9b8b8;
-  border-bottom: 1px solid #b9b8b8;
+  border-top: 1px solid #bbc2d1;
+  border-bottom: 1px solid #bbc2d1;
   margin: 1em 0 1em 0;
   padding: 0; }
 
@@ -820,45 +927,6 @@ Home Page
 #main {
   margin-bottom: 1em; }
 
-ul#myGrid li a {
-  position: relative;
-  display: block; }
-
-ul#myGrid li a:hover img {
-  opacity: 0.1;
-  filter: alpha(opacity=10); }
-
-ul#myGrid li a .overlay {
-  display: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  color: #231f20;
-  /*background-color:rgba(185,136,213,0.3);*/
-  text-align: center;
-  padding-top: 50%;
-  padding-left: 1em;
-  padding-right: 1em;
-  transform: translateY(-1em);
-  font-size: 1.6rem;
-  letter-spacing: 1px;
-  font-weight: 400;
-  text-transform: uppercase; }
-  ul#myGrid li a .overlay > h4 {
-    line-height: 1em;
-    text-align: center; }
-
-ul#myGrid li a.ab-light div.overlay {
-  color: #231f20; }
-
-ul#myGrid li a.ab-dark div.overlay {
-  color: #fff; }
-
-ul#myGrid li a:hover div.overlay {
-  display: block; }
-
 /* ------------------
 Portfolios
 -------------------*/
@@ -896,18 +964,16 @@ aside ul {
 body.modal-open {
   overflow: hidden; }
 
+.direction {
+  display: none; }
+
 div#port-container {
   display: none;
-  position: absolute;
   min-height: 10em;
   width: 100%;
   height: auto;
   background-color: white;
   color: #231f20;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  opacity: 0;
   z-index: 1;
   background-color: rgba(100, 100, 100, 0.3); }
 
