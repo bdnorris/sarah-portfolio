@@ -13,37 +13,99 @@
 
 		//ajax
 
-		var $myModal = jQuery("#myModal"),
-		 $siteURL = "http://" + top.location.host.toString(),
-		 $pieceLinks = jQuery('.pieceLink'),
+		var myModal = jQuery("#myModal"),
+		 siteURL = "http://" + top.location.host.toString(),
+		 pieceLinks = jQuery('.pieceLink'),
 			hash = window.location.hash,
 			$URL = '',
-			$ajaxSpinner = jQuery("#ajax-loader"),
-			$el, $allLinks = jQuery("a");
+			ajaxSpinner = jQuery("#ajax-loader"),
+			pageNum = 0,
+			el, allLinks = jQuery("a");
 
-		$ajaxSpinner.hide();
+		ajaxSpinner.hide();
 
 		//put the onclick even on this thing
-		/*
-		$pieceLinks.each(function() {
+
+		pieceLinks.each(function() {
 
 			jQuery(this).attr("href", "#" + this.pathname);
 
 		}).click(function() {
-				$ajaxSpinner.fadeIn();
-				jQuery(".portfolio").fadeOut();
-				$el = jQuery(this);
-				$URL = $el.attr('href').substring(1);
-				$URL = $URL + " #main";
+			//console.log('hello');
+			ajaxSpinner.fadeIn();
+			jQuery(".portfolio").fadeOut();
+			el = jQuery(this);
+			$URL = el.attr('href').substring(1);
+			$URL = $URL + "#main";
+			pageNum = jQuery(this).attr('data-port');
+			pageNum = parseInt(pageNum);
+			var prev = pageNum - 1;
+			var next = pageNum + 1;
+			var range = window.ports.length;
+			//console.log(range);
+			//console.log(prev + ' ' + pageNum + ' ' + next);
 
-				jQuery('#port-container').load($URL + " .entry-content", function() {
-  				// stuff to do when content is ready
-					$ajaxSpinner.fadeOut();
-					jQuery(".portfolio").fadeIn("300");
-				});
+			jQuery('#port-container-content').load($URL + " .entry-content", function() {
+				// stuff to do when content is ready
+				loadInstructions(prev, next, range, 'gallery-click');
+			});
 
-		});*/
+		});
 
+		jQuery(document).on('click', '#port-container .direction', function() {
+			var a = jQuery(this).attr('data-page');
+			var b = jQuery(this);
+
+			//console.log(a + ' ' + b);
+			ajaxSpinner.fadeIn();
+			jQuery('#port-container-content').fadeOut();
+			//el = jQuery(this);
+			//$URL = el.attr('data-page').substring(1);
+			$URL = a;
+			$URL = $URL + "#main";
+			//console.log($URL);
+			pageNum = b.attr('data-port');
+			pageNum = parseInt(pageNum);
+			var prev = pageNum - 1;
+			var next = pageNum + 1;
+			var range = window.ports.length;
+			//console.log(prev + ' ' + pageNum + ' ' + next);
+
+			jQuery('#port-container-content').load($URL + " .entry-content", function() {
+				// stuff to do when content is ready
+				loadInstructions(prev, next, range, 'prev-next-click');
+			});
+		});
+
+		jQuery(document).on('click', '.close', function() {
+			jQuery('#port-container').fadeOut();
+		});
+
+
+
+		function loadInstructions(prev, next, range, whichClick) {
+			console.log(prev + ' ' + next + ' ' + range + ' ' + whichClick);
+			ajaxSpinner.fadeOut();
+			if(whichClick == 'gallery-click') {
+				jQuery("#port-container").fadeIn("300");
+			}
+			else if (whichClick == 'prev-next-click') {
+				jQuery("#port-container-content").fadeIn("300");
+			}
+			//console.log(pageNum);
+			if(prev < 0) {
+				jQuery('#port-container .previous').hide();
+			}
+			else {
+				jQuery('#port-container .previous').show().attr('data-page', window.ports[prev]).attr('data-port', [prev]);
+			}
+			if(next >= range) {
+				jQuery('#port-container .next').hide();
+			}
+			else {
+				jQuery('#port-container .next').show().attr('data-page', window.ports[next]).attr('data-port', [next]);
+			}
+		}
 
 /*
 		new Vue({
@@ -71,8 +133,7 @@
                  alert(JSON.stringify(error));
 								 $ajaxSpinner.fadeOut();
              }
-         });*/
-/*
+         });
 			 },
 			 loadPortAPI: function() {
 
@@ -90,9 +151,11 @@
 			}
 		});
 */
-		jQuery('.modaal-ajax').modaal({
-		    type: 'ajax'
-		});
+		/*jQuery('.modaal-ajax').modaal({
+		    type: 'ajax',
+				fullscreen: true,
+				//loading_content: 'Loading &hellip'
+		});*/
 
 		jQuery('.noclick').click(function(){
 			return false;
