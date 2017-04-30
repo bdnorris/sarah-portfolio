@@ -23,18 +23,22 @@ body.modal-open {
     //position: fixed;
 }
 
+.direction {
+  display: none;
+}
+
 div#port-container {
   display: none;
-  position: absolute;
+  //position: absolute;
   min-height: 10em;
   width: 100%;
   height: auto;
   background-color: white;
   color: $near-black;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  opacity: 0;
+  //bottom: 0;
+  //left: 0;
+  //top: 0;
+  //opacity: 0;
   //overflow: scroll;
   z-index: 1;
   background-color: rgba(100, 100, 100, 0.3);

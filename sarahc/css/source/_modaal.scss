@@ -169,7 +169,10 @@ $modaal-grey: #afb7bc;
 		outline: none;
 		background: #fff;
 		&:before,
-		&:after { background: #b93d0c; }
+		&:after {
+			//background: #b93d0c;
+			background-color: $blue;
+		}
 	}
 	span {
 		@include modaal-hidetext;

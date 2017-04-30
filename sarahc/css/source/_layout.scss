@@ -1,0 +1,55 @@
+.port-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include display(flex);
+  @include justify-content(flex-start);
+  @include flex-wrap(wrap);
+  @include flex-direction(row);
+
+  & > li {
+    margin: 0 30px 60px 30px;
+    @include flex(0 0 calc(20% - 60px));
+    border: 1px solid $gray;
+  }
+}
+
+ul#myGrid li a {position:relative;display:block;}
+ul#myGrid li a img {}
+ul#myGrid li a:hover img {opacity:0.1;
+filter:alpha(opacity=10);}
+
+ul#myGrid li a .overlay {
+	display: none;
+
+  @include justify-content(center);
+  @include align-items(center);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	color: $near_black;
+	/*background-color:rgba(185,136,213,0.3);*/
+	text-align: center;
+	//padding-top: 50%;
+	padding-left: 1em;
+	padding-right: 1em;
+	//transform: translateY(-0.8em);
+	//font-size: 1.6rem;
+	& > h4 {
+    font-size: 16px;
+		line-height: 1em;
+		text-align: center;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-transform: uppercase;
+	}
+}
+ul#myGrid li a.ab-light div.overlay {color:$near-black;}
+ul#myGrid li a.ab-dark div.overlay {color:#fff;}
+ul#myGrid li a:hover div.overlay {
+  //display:block;
+  @include display(flex);
+}

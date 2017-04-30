@@ -7,11 +7,11 @@ Header
   //padding-bottom:2em;
 }
 #ajax-loader {
-    margin-left:-50px;
+    //margin-left:-50px;
     height: 100px;
-    left: 50%;
-    position: absolute;
-    top: 14em;
+    //left: 50%;
+    position: relative;
+    top: 20vh;
     width: 100px;
     z-index: 1000;
 }
