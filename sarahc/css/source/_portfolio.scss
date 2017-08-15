@@ -30,18 +30,22 @@ body.modal-open {
 div#port-container {
   display: none;
   //position: absolute;
+  position: fixed;
+  // width: 100vw;
+  // height: 100vh;
   min-height: 10em;
-  width: 100%;
-  height: auto;
+  // width: 100%;
+  // height: auto;
   background-color: white;
   color: $near-black;
-  //bottom: 0;
-  //left: 0;
-  //top: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
   //opacity: 0;
   //overflow: scroll;
-  z-index: 1;
-  background-color: rgba(100, 100, 100, 0.3);
+  z-index: 100;
+  background-color: rgba(100, 100, 100, 0.5);
 }
 
 div.open#port-container {

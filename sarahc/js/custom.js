@@ -14,13 +14,14 @@
 		//ajax
 
 		var myModal = jQuery("#myModal"),
-		 siteURL = "http://" + top.location.host.toString(),
-		 pieceLinks = jQuery('.pieceLink'),
-			hash = window.location.hash,
-			$URL = '',
-			ajaxSpinner = jQuery("#ajax-loader"),
-			pageNum = 0,
-			el, allLinks = jQuery("a");
+		siteURL = "http://" + top.location.host.toString(),
+		pieceLinks = jQuery('.pieceLink'),
+		hash = window.location.hash,
+		$URL = '',
+		ajaxSpinner = jQuery("#ajax-loader"),
+		pageNum = 0,
+		el,
+		allLinks = jQuery("a");
 
 		ajaxSpinner.hide();
 
