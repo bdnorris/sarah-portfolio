@@ -99,10 +99,9 @@ get_header(); ?>
 		<div id="port-container">
 			<button type="button" name="close" class="close">X</button>
 			<button type="button" name="previous" class="previous direction" data-page="" data-port="">P</button>
-			<div class="spinner" id="ajax-loader"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>
 			<div id="port-container-content">
-
 			</div>
+			<div class="spinner" id="ajax-loader"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>
 			<button type="button" name="next" class="next direction" data-page="" data-port="">N</button>
 		</div>
 	</section><!-- #primary -->

@@ -8,10 +8,14 @@
   @include flex-wrap(wrap);
   @include flex-direction(row);
 
+
   & > li {
-    margin: 0 30px 60px 30px;
-    @include flex(0 0 calc(20% - 60px));
+    margin: 0 2vw 4vw 2vw;
     border: 1px solid $gray;
+    @include flex(0 0 calc(33.333333% - 4vw));
+    @media only screen and (min-width: 40.063em) {
+      @include flex(0 0 calc(20% - 4vw));
+    }
   }
 }
 

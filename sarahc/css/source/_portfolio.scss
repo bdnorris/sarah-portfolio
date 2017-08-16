@@ -34,6 +34,7 @@ div#port-container {
   // width: 100vw;
   // height: 100vh;
   min-height: 10em;
+  overflow-y: scroll;
   // width: 100%;
   // height: auto;
   background-color: white;
@@ -46,13 +47,52 @@ div#port-container {
   //overflow: scroll;
   z-index: 100;
   background-color: rgba(100, 100, 100, 0.5);
+
 }
 
 div.open#port-container {
-  display: block;
+  @include display(flex);
+  @include flex-flow(row nowrap);
+  @include justify-content(space-around)
+  @include align-items(center);
   opacity: 1;
   //animation: slide-in .75s 1 forwards;
   //left: 0;
+  button.close {
+    @include flex(none);
+    position: absolute;
+    top: 1em;
+    right: 1em;
+  }
+
+  .spinner {
+    @include flex(none);
+    // @include flex-basis(50vw);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    // width: 50vw;
+    height: auto;
+  }
+
+  #port-container-content {
+    width: 50vw;
+    @include flex-basis(50vw);
+    @include align-self(flex-start);
+    // overflow-y: scroll;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    &.transition {
+      opacity: 0;
+    }
+  }
+
+  .previous {
+    // @include align-self(flex-start);
+  }
+  .next {
+    // @include align-self(flex-end);
+  }
 }
 
 

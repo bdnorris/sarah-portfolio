@@ -59,7 +59,7 @@
 
 			//console.log(a + ' ' + b);
 			ajaxSpinner.fadeIn();
-			jQuery('#port-container-content').fadeOut();
+			jQuery('#port-container-content').addClass('transition');
 			//el = jQuery(this);
 			//$URL = el.attr('data-page').substring(1);
 			$URL = a;
@@ -79,7 +79,7 @@
 		});
 
 		jQuery(document).on('click', '.close', function() {
-			jQuery('#port-container').fadeOut();
+			jQuery('#port-container').removeClass('open');
 		});
 
 
@@ -88,10 +88,10 @@
 			console.log(prev + ' ' + next + ' ' + range + ' ' + whichClick);
 			ajaxSpinner.fadeOut();
 			if(whichClick == 'gallery-click') {
-				jQuery("#port-container").fadeIn("300");
+				jQuery("#port-container").addClass("open");
 			}
 			else if (whichClick == 'prev-next-click') {
-				jQuery("#port-container-content").fadeIn("300");
+				jQuery("#port-container-content").removeClass("transition");
 			}
 			//console.log(pageNum);
 			if(prev < 0) {
