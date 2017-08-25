@@ -51,11 +51,17 @@ div#port-container {
 }
 
 div.open#port-container {
-  @include display(flex);
-  @include flex-flow(row nowrap);
-  @include justify-content(space-around)
-  @include align-items(center);
+  display: block;
+  // @include flex-flow(column nowrap);
+  // @include justify-content(center)
+  padding: 1em;
   opacity: 1;
+  @media only screen and (min-width: 40.063em) {
+    @include flex-flow(row nowrap);
+    @include justify-content(space-around);
+    @include display(flex);
+    @include align-items(center);
+  }
   //animation: slide-in .75s 1 forwards;
   //left: 0;
   button.close {
@@ -63,6 +69,47 @@ div.open#port-container {
     position: absolute;
     top: 1em;
     right: 1em;
+    width: 2.5em;
+    height: 2.5em;
+    padding: 0;
+    svg {
+      width: 100%;
+      height: auto;
+      #Close {
+        fill: white;
+      }
+    }
+    @media only screen and (min-width: 40.063em) {
+
+    }
+    &:hover, &:focus {
+      background: none;
+      svg {
+        #Close {
+          fill: $blue;
+        }
+      }
+    }
+  }
+
+  button.direction {
+    width: 2em;
+    height: 3em;
+    &:hover, &:focus {
+      background: none;
+      svg {
+        #Chevrons {
+          fill: $blue;
+        }
+      }
+    }
+    svg {
+      width: 100%;
+      height: auto;
+      #Chevrons {
+        fill: white;
+      }
+    }
   }
 
   .spinner {
@@ -73,15 +120,24 @@ div.open#port-container {
     left: 50%;
     // width: 50vw;
     height: auto;
+    width: 70px;
+    text-align: center;
+    transform: translateX(-35px);
   }
 
   #port-container-content {
-    width: 50vw;
-    @include flex-basis(50vw);
-    @include align-self(flex-start);
+    width: 90vw;
+    margin: 3em auto 3em auto;
+    // margin-top: 24vh;
     // overflow-y: scroll;
     opacity: 1;
     transition: opacity 0.2s ease;
+    @media only screen and (min-width: 40.063em) {
+      margin-top: 24vh;
+      width: 50vw;
+      @include align-self(flex-start);
+      @include flex-basis(50vw);
+    }
     &.transition {
       opacity: 0;
     }
@@ -89,9 +145,25 @@ div.open#port-container {
 
   .previous {
     // @include align-self(flex-start);
+    @include flex(0 1 auto);
+
+    @media only screen and (max-width: 40.062em) {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+    }
   }
   .next {
     // @include align-self(flex-end);
+    @include flex(0 1 auto);
+
+    @media only screen and (max-width: 40.062em) {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 50%;
+    }
   }
 }
 
